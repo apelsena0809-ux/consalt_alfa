@@ -1,0 +1,10 @@
+services:
+  alfa-course:
+    build: .
+    container_name: alfa-course-ui
+    ports:
+      - "${PORT:-8501}:8501"
+    environment:
+      - PORT=8501
+    volumes:
+      - ./data:/app/data
